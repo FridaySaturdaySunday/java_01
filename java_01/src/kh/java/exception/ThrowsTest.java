@@ -35,7 +35,7 @@ public class ThrowsTest{
 	
 	public static void methodC(int input,int min,int max) throws MyCharCheckException {
 		if(input < min || input > max) {
-			throw new MyCharCheckException("내가만든오류메시지");
+			throw new MyCharCheckException("내가만든오류메시지"); // throw : 예외 발생시켜줘
 		}
 		System.out.println("정상범위 코드입니다.");
 	}
@@ -68,6 +68,8 @@ public class ThrowsTest{
 		} catch (FileNotFoundException e){
 			System.out.println("파일이 없습니다.");
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (NullPointerException e) {
 			e.printStackTrace();
 		} finally {
 			try {

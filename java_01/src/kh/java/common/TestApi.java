@@ -1,5 +1,6 @@
 package kh.java.common;
 
+import java.lang.reflect.Field;
 import java.util.StringTokenizer;
 
 public class TestApi {
@@ -27,6 +28,37 @@ public class TestApi {
 		while(st.hasMoreElements()) {
 			System.out.println(st.nextElement()); // 그래서 여기서 아무것도 출력되지않음
 		}
+		
+		
+		
+		// getClass() : 대상 클래스의 정보 반환
+		Class cls = st.getClass();
+//		Class<? extends StringTokenizer> cls = st.getClass(); // 노란밑줄 통해서 이렇게 자동완성해도됨
+		
+		Class<? extends String[]> cls2 = arr.getClass();
+		
+		System.out.println(cls.getName()); // StringTokenizer
+		System.out.println(cls2.getName()); // String[]
+		
+		Field[] fls = cls.getDeclaredFields();
+		for(Field i : fls) {
+			System.out.println(i);
+		}
+		
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
