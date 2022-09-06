@@ -1,6 +1,7 @@
 package kh.java.common;
 
 import java.lang.reflect.Field;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class TestApi {
@@ -43,6 +44,14 @@ public class TestApi {
 		Field[] fls = cls.getDeclaredFields();
 		for(Field i : fls) {
 			System.out.println(i);
+			
+			
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		sc.nextLine(); // flush() 와 같은 효과. 버퍼비우기.
+			
+			
+			
 		}
 		
 	}
