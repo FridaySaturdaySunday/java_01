@@ -75,8 +75,10 @@ public class TestIO {
 			e.printStackTrace();
 		} finally {
 			try {
-				if(bos2 != null) bos2.close(); // close(); : 반드시 finally문 안에!!!
-				if(fos2 != null) fos2.close(); // 순서 : 보조스트림 -> 기반스트림
+				if(bos2 != null) bos2.close(); // close() : 반드시 finally문 안에!!!
+				if(bos != null) bos.close(); // close() 하는 순서 : 선언 순서의 반대!!!!!!!
+				if(fos2 != null) fos2.close(); 
+				if(fos != null) fos.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			} 
@@ -84,8 +86,7 @@ public class TestIO {
 		
 		
 		
-		
-		
+
 		
 		
 		
