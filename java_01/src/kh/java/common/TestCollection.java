@@ -117,7 +117,10 @@ public class TestCollection {
 			System.out.printf("key:%s, value:%d\n", key, map1.get(key));
 		}
 		
-		
+		System.out.println("====Map enhanced for 출력====");
+		for(String key : map1.keySet()) { // .keySet() 해줘야함!(enhanced for는 배열, list, set 등 가능)
+			System.out.println(key);
+		}
 		
 		// Generic : '일반적인'이라는 뜻
 		// 내부에서 사용할 데이터 타입을 외부에서 지정하는 기법
